@@ -13,3 +13,14 @@ const generatePost = (id) => ({
 
 export const data = Array.from({ length: 10 }, (_, i) => generatePost(i + 1));
 
+
+
+const generateMessage = (id) => ({
+  id,
+  name: faker.person.firstName(),
+  avatar: faker.image.avatar(),
+  message: faker.lorem.sentence(),
+  timeAgo: `${faker.number.int({ min: 1, max: 59 })}m ago`,
+});
+
+export const messages = Array.from({ length: 4 }, (_, i) => generateMessage(i + 1));
