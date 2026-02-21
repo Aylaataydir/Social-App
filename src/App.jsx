@@ -6,9 +6,12 @@ import AppRouter from './router/AppRouter'
 function App() {
 
   return (
-    <SocialContextProvider>
-      <AppRouter />
-    </SocialContextProvider>
+    <div className="bg-grd">
+      <SocialContextProvider>
+        <AppRouter />
+      </SocialContextProvider>
+    </div>
+
   )
 }
 
